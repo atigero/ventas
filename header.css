@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 .encabezado-moderno {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
@@ -20,7 +26,27 @@ body.scrolled .encabezado-moderno {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
+}
+
+.zona-izquierda {
+  flex: 1;
+}
+
+.zona-centro {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
+}
+
+.zona-derecha {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
 }
 
 .encabezado-logo {
@@ -32,44 +58,40 @@ body.scrolled .encabezado-moderno {
   gap: 8px;
 }
 
-.encabezado-nav {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.encabezado-nav a {
+.zona-centro a {
   text-decoration: none;
   color: #343a40;
   font-weight: 500;
-  position: relative;
-  transition: color 0.3s ease;
   display: flex;
   align-items: center;
   gap: 6px;
+  transition: color 0.3s ease;
 }
 
-.encabezado-nav a:hover {
+.zona-centro a:hover {
   color: #0d6efd;
 }
 
-.encabezado-nav a.cerrar-sesion {
+.cerrar-sesion {
   background-color: #dc3545;
   color: white;
   padding: 6px 12px;
   border-radius: 6px;
   font-weight: 600;
+  text-decoration: none;
   transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.encabezado-nav a.cerrar-sesion:hover {
+.cerrar-sesion:hover {
   background-color: #c82333;
 }
 
 .encabezado-usuario {
   font-size: 0.9rem;
   color: #6c757d;
-  margin-left: auto;
 }
 
 @keyframes fadeInDown {

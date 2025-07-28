@@ -1,0 +1,451 @@
+/* =========================
+   Estilos Generales
+   ========================= */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-image: url('../img/fondo.jpg'); /* ruta relativa */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* =========================
+   Encabezado Principal
+   ========================= */
+.header {
+  width: 100%;
+  background-color: #D35400;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+/* =========================
+   Menú de Navegación
+   ========================= */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+/* =========================
+   Contenedor Principal
+   ========================= */
+.container {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  background-color: rgba(255, 255, 255, 0.85); /* Blanco con 85% opacidad */
+  backdrop-filter: blur(2px); /* Opcional: difumina el fondo debajo */
+}
+
+/* =========================
+   Tabla de Ventas
+   ========================= */
+.ventas-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+.ventas-table thead tr th {
+  background: #d6d6d6;
+  color: #333;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ccc;
+  white-space: nowrap;
+}
+
+.ventas-table tbody tr td {
+  background: #ffffff;
+  color: #333;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: left;
+  white-space: nowrap;
+}
+.ventas-table td.observaciones {
+  word-break: break-word;
+  white-space: normal;
+  max-width: 300px;
+}
+
+/* =========================
+   Estados y Situaciones
+   ========================= */
+.pago, .estado, .situacion {
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.resaltado-hoy {
+  background-color: #ffa50088 !important;
+}
+
+/* =========================
+   Botón edición
+   ========================= */
+.btn-editar {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-editar:hover {
+  background: #0056b3;
+}
+
+/* =========================
+   Formularios
+   ========================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.estado-box, .situacion-box {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* =========================
+   Checkbox con label
+   ========================= */
+.label-finalizada {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  padding: 10px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.input-finalizada {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.label-finalizada:hover {
+  background: #e0e0e0;
+}
+
+/* =========================
+   Canvas / Gráficos
+   ========================= */
+canvas {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.card canvas {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  height: 250px;
+}
+
+/* =========================
+   Botón Actualizar
+   ========================= */
+.btn-actualizar {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* =========================
+   Estado/Situación contenedores
+   ========================= */
+.estado-situacion-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.estado-box, .situacion-box {
+  width: 48%;
+}
+
+/* =========================
+   Filtros
+   ========================= */
+.filtros-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.filtro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.filtro label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.filtro select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* =========================
+   Layout responsive general
+   ========================= */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .ventas-table {
+    font-size: 14px;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  canvas {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+  }
+
+  .navbar a {
+    padding: 12px 10px;
+    font-size: 16px;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #222;
+    display: block;
+    text-align: center;
+  }
+
+  .estado-situacion-container {
+    flex-direction: column;
+  }
+
+  .estado-box, .situacion-box {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+
+  .filtros-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filtro {
+    width: 100%;
+  }
+
+  .ventas-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .btn-editar, .btn-actualizar {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* =========================
+   Dashboard layout y cards
+   ========================= */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.3s;
+  background: #ffffff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-top: 10px;
+  font-size: 28px;
+}
+
+.card .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Colores especiales si los usás */
+.ventas-finalizadas {
+  background-color: #28a745;
+  color: white;
+}
+
+.ventas-activas {
+  background-color: #ffc107;
+  color: black;
+}
+/* =========================
+   Tarjetas métricas y repartos (dashboard)
+   ========================= */
+.card-dashboard {
+  background-color: #ffffff;
+  color: #1a1a2e;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  text-align: left;
+  transition: box-shadow 0.3s ease;
+}
+
+.card-dashboard:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-dashboard h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+.card-dashboard p {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.card-dashboard ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card-dashboard ul li {
+  padding: 6px 0;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+}
+/* =========================
+   Ajuste gráfico de medios de pago
+   ========================= */
+#graficoPago {
+  max-height: 300px;
+  margin-top: 20px;
+}
+
+/* =========================
+   Responsive adicional para dashboard
+   ========================= */
+@media (max-width: 768px) {
+  #graficoPago {
+    max-height: 240px;
+  }
+
+  .card-dashboard h4 {
+    font-size: 18px;
+  }
+}
+
